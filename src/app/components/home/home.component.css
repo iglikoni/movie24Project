@@ -1,0 +1,32 @@
+.mainCard{
+    display: flex;
+    margin: 2em 0em;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+.card-link {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    cursor: pointer;
+    text-decoration: none;
+    color: rgb(196, 181, 44);
+}
+
+.card-img-top{
+    height: 50%;
+    width: 100%;
+}
+
+.mainCard{
+    margin: 1em 1em;
+    height: 50%;
+    width: 100%;
+}
+
+.form-control{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+

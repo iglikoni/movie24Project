@@ -1,0 +1,19 @@
+<app-header></app-header>
+<form [formGroup]="editMovie" *ngIf="isLoading" (ngSubmit)="postEdit()">
+  <div class="mb-2">
+    <label for="formGroupExampleInput" class="form-label">Add Name</label>
+    <input type="text" class="form-control" id="name" placeholder="Add Movie Name" formControlName="name">
+
+    <div class="mb-2">
+      <label for="formGroupExampleInput" class="form-label">Add Image Url</label>
+      <input type="text" class="form-control" id="image" placeholder="Add Movie ImageUrl" formControlName="image">
+      {{moviech.image}}
+    </div>
+  </div>
+  <div class="mb-2">
+    <label for="formGroupExampleInput" class="form-label">Add Description</label>
+    <input type="text" class="form-control" id="description" placeholder="Add Movie Description"
+      formControlName="description">
+  </div>
+  <button class="btn btn-primary" type="submit">Add New Movie</button>
+</form>

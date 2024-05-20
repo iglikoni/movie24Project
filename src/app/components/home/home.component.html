@@ -1,0 +1,25 @@
+<app-header></app-header>
+
+<div class="row">
+    <div class="col">
+        <input type="text" [(ngModel)]="filterMovies" class="form-control" placeholder="Search Movie Name">
+    </div>
+
+    <div class="mainCard">
+        <div class="card1" style="width: 18rem;" *ngFor="let movie of movies | pipe:filterMovies:'name'">
+            <img class="card-img-top" [src]="movie.image" alt="{{movie.name}}">
+            <div class="card-body">
+                <h2>{{movie.name}}</h2>
+
+                <h5 style="font-weight: 100;" class="card-text">{{movie.description | shortenPipe }}</h5>
+            </div>
+            <div class="card-body">
+                <a class="card-link" (click)="editMovie(movie)">Edit Movie</a>
+                <a class="card-link" (click)="deleteMovie(movie.id)">Delete This Movie</a>
+                <a class="card-link" (click)="movieDetail(movie)">View Movie Details</a>
+            </div>
+        </div>
+    </div>
+
+    <button class="btn btn-link" [disabled]="currentPage===1" (click)="backward()">Previous</button>
+    <button class="btn btn-link" (click)="forward()">Next</button>-

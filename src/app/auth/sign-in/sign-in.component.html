@@ -1,0 +1,15 @@
+<form [formGroup]="signUpForm" (ngSubmit)="postNewUser()">
+    
+    <div data-mdb-input-init class="form-outline mb-4">
+      <label class="form-label" for="form2Example1">Email address</label>
+      <input type="email" id="email" class="form-control" formControlName="email" />
+    </div>
+    <div data-mdb-input-init class="form-outline mb-4">
+      <label class="form-label" for="form2Example2">Password</label>
+      <input type="" id="form2Example2" class="form-control" formControlName="password" />
+      <hr>
+      <a href="">Log In</a>
+    </div>
+    <button type="submit" [disabled]="!signUpForm.valid" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-block mb-4">Sign
+      in</button>
+  </form>

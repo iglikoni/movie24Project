@@ -1,0 +1,12 @@
+<app-header></app-header>
+
+<div class="mainCard">
+    <div class="card1" style="width: 18rem;" *ngFor="let movie of movies ">
+        <img class="card-img-top" [src]="movie.image" alt="{{movie.name}}">
+        <div class="card-body">
+            <h2>{{movie.name}}</h2>
+
+            <h5 class="card-text">{{movie.description}}</h5>
+        </div>
+    </div>
+</div>

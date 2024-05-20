@@ -1,0 +1,9 @@
+
+<app-header></app-header>   
+    <div class="card" *ngIf="isLoading">
+        <div class="card-body" >
+          <h5 class="card-title">{{movie.name}}</h5>
+          <p class="card-text">{{movie.description}}</p>
+        </div>
+        <img style="width: 50em; height: 20em;" class="card-img-bottom" [src]="movie.image" >
+      </div>

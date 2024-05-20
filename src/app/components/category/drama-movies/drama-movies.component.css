@@ -1,0 +1,14 @@
+.mainCard{
+    display: flex;
+    margin: 2em 0em;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+.card-link {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    cursor: pointer;
+    text-decoration: none;
+    color: rgb(196, 181, 44);
+}
